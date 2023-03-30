@@ -5,10 +5,13 @@ import styles from "@/styles/Home.module.css";
 import React from "react";
 import TitleComponent from "@/components/TitleComponent";
 import UserLoginButton from "@/components/UserLoginButton";
+import CreateAccountButton from "@/components/CreateAccount";
+import { useTranslation } from "next-i18next";
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
@@ -19,8 +22,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
+          <p>{t("Hello")}</p>
           <TitleComponent />
           <UserLoginButton />
+          <CreateAccountButton />
         </div>
       </main>
     </>

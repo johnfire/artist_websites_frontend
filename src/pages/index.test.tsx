@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Home from "../pages/index";
+// import Home from "../pages/index";
 
-describe("Index some stupid tests.", () => {
+describe("Index some basic tests.", () => {
   //   it("adds two and two", () => {
   //     render(<Home />);
 
