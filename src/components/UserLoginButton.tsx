@@ -1,7 +1,7 @@
 import React from "react";
 
 const UserLoginButton = () => {
-  console.log("ULB5 here is user login button");
+  console.log("ULB5 user login button");
 
   const handleClick = () => {
     console.log("ULB7 clicked login button ");
@@ -10,7 +10,7 @@ const UserLoginButton = () => {
   return (
     <>
       <button type="button" onClick={handleClick}>
-        login?
+        &nbsp;&nbsp;login?&nbsp;&nbsp;
       </button>
     </>
   );

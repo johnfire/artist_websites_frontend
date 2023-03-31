@@ -10,7 +10,7 @@ const CreateAccountButton = () => {
   return (
     <>
       <button type="button" onClick={handleClick}>
-        Create new user account
+        &nbsp;&nbsp;&nbsp;&nbsp;Create new user account&nbsp;&nbsp;&nbsp;&nbsp;
       </button>
     </>
   );
