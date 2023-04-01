@@ -1,6 +1,9 @@
 {
   "front_page": {
-    "title": "Weclome to the Artists make your own website  application!",
-    "footer": "where you create your own website!S"
+    "choseLanguage": "Chose a language:",
+    "createAccount": "Create new user account",
+    "footer": "Where you create your own website!",
+    "login": "login",
+    "title": "Welcome to the Artists 'make your own website' application!"
   }
 }

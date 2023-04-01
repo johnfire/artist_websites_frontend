@@ -3,8 +3,6 @@ import type { AppProps } from "next/app";
 import { NextIntlProvider } from "next-intl";
 
 function App({ Component, pageProps }: AppProps) {
-  console.log("load app:");
-
   return (
     <NextIntlProvider messages={pageProps.messages}>
       <Component {...pageProps} />;

@@ -1,17 +1,14 @@
 import React from "react";
-// import {useTranslations, useFormatter} from 'next-intl';
+import { useTranslations, useFormatter } from "next-intl";
 
 const TitleComponent = () => {
   console.log("TC5 title ");
-  // const t = useTranslations('UserDetails');
-  // const format = useFormatter();
+  const t = useTranslations("front_page");
+  // const format = useFormatter(); // use later
 
   return (
     <>
-      <div>
-        &nbsp;&nbsp;Welcome to the Artists "make your website"
-        application&nbsp;&nbsp;
-      </div>
+      <div>&nbsp;&nbsp;{t("title")}&nbsp;&nbsp;</div>
     </>
   );
 };

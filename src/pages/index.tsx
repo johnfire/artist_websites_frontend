@@ -2,20 +2,23 @@ import Head from "next/head";
 // import Image from "next/image";
 // import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import React from "react";
+import React, { useState } from "react";
 import TitleComponent from "@/components/TitleComponent";
 import UserLoginButton from "@/components/UserLoginButton";
 import CreateAccountButton from "@/components/CreateAccount";
 import { GetStaticPropsContext } from "next";
 import { useTranslations, useFormatter } from "next-intl";
+import LanguageSelector from "@/components/LangaugeSelector";
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   console.log("Home27:");
-  const t = useTranslations("about");
+  const t = useTranslations("front_page");
   const format = useFormatter();
+  const [currentLanguage, setCurrentLanguage] = useState<string>("en");
 
+  console.log("here is the current language:", currentLanguage);
   return (
     <>
       <Head>
@@ -31,11 +34,15 @@ export default function Home() {
         <div className={styles.description}>
           <UserLoginButton />
           <CreateAccountButton />
+          <LanguageSelector
+            currentLanguage={currentLanguage}
+            setCurrentLanguage={setCurrentLanguage}
+          />
         </div>
         <div>
           <TitleComponent />
         </div>
-        <div> where you create your own website!</div>
+        <div> {t("footer")}</div>
       </main>
     </>
   );
@@ -44,7 +51,7 @@ export default function Home() {
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../../locales/en.json`)).default,
+      messages: (await import(`../../locales/${locale}.json`)).default,
     },
   };
 }

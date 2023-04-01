@@ -1,6 +1,9 @@
 {
     "front_page": {
-      "title": "Welkommen zu dem Kunstlers mach  deine Eigene Website  application!",
-      "footer": "Wo du gestalte deine eigene Website"
+      "choseLanguage": "Wahlen Sie eine Sprache:",
+      "createAccount": "Erstellen Sie ein Konto", 
+      "footer": "Wo du gestalte deine eigene Website!",
+      "login": "Anmelden",
+      "title": "Welkommen zu dem Kunstlers mach  deine Eigene Website  application!"
     }
   }
