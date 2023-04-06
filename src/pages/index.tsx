@@ -9,6 +9,7 @@ import CreateAccountButton from "@/components/CreateAccount";
 import { GetStaticPropsContext } from "next";
 import { useTranslations, useFormatter } from "next-intl";
 import LanguageSelector from "@/components/LangaugeSelector";
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -29,9 +30,9 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>
-          <TitleComponent />
-        </div>
+        <TitleComponent />
+        <img src={"/thirteen.svg"} />
+        <Link href="/About">about us</Link>
       </main>
     </>
   );
