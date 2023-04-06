@@ -8,7 +8,8 @@ const LanguageSelector = ({
   currentLanguage,
   setCurrentLanguage,
 }: SelectProps) => {
-  console.log("LS5", currentLanguage);
+  console.log("LS11", currentLanguage);
+
   const router = useRouter();
   const t = useTranslations("front_page");
 
@@ -33,8 +34,6 @@ const LanguageSelector = ({
           <option value="it">Italiano</option>
           <option value="nl">Niederlands</option>
         </select>
-        <br />
-        <br />
       </label>
     </form>
   );

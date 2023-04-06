@@ -12,13 +12,11 @@ import LanguageSelector from "@/components/LangaugeSelector";
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
-  console.log("Home27:");
+const Home: React.FC = () => {
+  console.log("Home16:");
   const t = useTranslations("front_page");
   const format = useFormatter();
-  const [currentLanguage, setCurrentLanguage] = useState<string>("en");
 
-  console.log("here is the current language:", currentLanguage);
   return (
     <>
       <Head>
@@ -31,22 +29,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <UserLoginButton />
-          <CreateAccountButton />
-          <LanguageSelector
-            currentLanguage={currentLanguage}
-            setCurrentLanguage={setCurrentLanguage}
-          />
-        </div>
         <div>
           <TitleComponent />
         </div>
-        <div> {t("footer")}</div>
       </main>
     </>
   );
-}
+};
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -55,3 +44,5 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     },
   };
 }
+
+export default Home;

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import UserLoginButton from "./UserLoginButton";
+import CreateAccountButton from "./CreateAccount";
+import LanguageSelector from "./LangaugeSelector";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   console.log("Nav4");
+  const [currentLanguage, setCurrentLanguage] = useState<string>("en");
+
   return (
-    <div>
-      here will be the navbar dfasssssssssssssssssssssssssssssssssssssssss
-    </div>
+    <nav>
+      <UserLoginButton />
+      <CreateAccountButton />
+      <LanguageSelector
+        currentLanguage={currentLanguage}
+        setCurrentLanguage={setCurrentLanguage}
+      />
+    </nav>
   );
 };
 

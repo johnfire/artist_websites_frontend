@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +104,44 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+body {
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Nunito";
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+.content {
+  /* max-width: 960px; */
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+nav {
+  margin: 10px;
+  padding: 10px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #161212;
+  background-color: rgb(166, 135, 168);
+}
+nav a {
+  margin-left: 12px;
+}
+/* nav .logo {
+  margin-right: auto;
+} */
+footer {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  color: #eef5f0;
+  background-color:#8872b7 ;
+  border-top: 2px solid #020101;
 }

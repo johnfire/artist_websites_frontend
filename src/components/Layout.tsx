@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Layout: React.FC = ({ children }: React.ReactElement) => {
   console.log("layout 5");
   return (
-    <div>
+    <div className="content">
       <Navbar />
       {children}
       <Footer />
