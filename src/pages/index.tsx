@@ -10,6 +10,7 @@ import { GetStaticPropsContext } from "next";
 import { useTranslations, useFormatter } from "next-intl";
 import LanguageSelector from "@/components/LangaugeSelector";
 import Link from "next/link";
+import Image from "next/image";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
       </Head>
       <main className={styles.main}>
         <TitleComponent />
-        <img src={"/thirteen.svg"} />
+        <Image src={"/thirteen.svg"} alt="13" width={200} height={200} />
         <Link href="/About">about us</Link>
       </main>
     </>
