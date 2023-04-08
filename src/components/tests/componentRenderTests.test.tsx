@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
 import TitleComponent from "../TitleComponent";
+import { NextIntlProvider } from "next-intl";
 
 describe("Components: some basic tests.", () => {
   it("adds two and two", () => {
@@ -9,8 +9,11 @@ describe("Components: some basic tests.", () => {
   });
 
   it("first renderer test ", () => {
-    const component = renderer.create(<TitleComponent />);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = render(
+      <NextIntlProvider locale="en">
+        <TitleComponent />
+      </NextIntlProvider>
+    );
+    expect(container).toMatchSnapshot();
   });
 });

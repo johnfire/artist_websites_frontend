@@ -2,6 +2,10 @@
 
 exports[`Components: some basic tests. first renderer test  1`] = `
 <div>
-  Welcome to the Artists "make your website" application
+  <div>
+      
+    front_page.title
+      
+  </div>
 </div>
 `;
