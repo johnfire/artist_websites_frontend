@@ -7,9 +7,8 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <NextIntlProvider messages={pageProps.messages}>
       {/* @ts-ignore */}
-      <Layout>
-        <Component {...pageProps} />;
-      </Layout>
+      {/* <Layout> */}
+      <Component {...pageProps} />;{/* </Layout> */}
     </NextIntlProvider>
   );
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 24vh;
 }
 
@@ -33,6 +33,23 @@
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
+
+.basicColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.basicRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
 
 .code {
   font-weight: 700;
@@ -71,9 +88,13 @@
   line-height: 1.5;
   max-width: 30ch;
 }
+.textCenter {
+  text-align: center;
+}
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -104,6 +125,20 @@
   transform: translateZ(0);
 }
 
+/* .customStyles  {
+  overlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
+  }
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  }
+};
+ */
 
 
 /* Enable hover only on non-touch devices */
