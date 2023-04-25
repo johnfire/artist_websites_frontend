@@ -7,7 +7,7 @@ type layoutProps = {
 };
 
 /* @ts-ignore */ // ReactFC cannot have child compponents in typescript, its a react 18 bug.....
-const Layout = ({ children }: layoutProps) => {
+const CustomerLayout = ({ children }: layoutProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
 
   console.log("layout 5");
@@ -23,4 +23,4 @@ const Layout = ({ children }: layoutProps) => {
   );
 };
 
-export default Layout;
+export default CustomerLayout;

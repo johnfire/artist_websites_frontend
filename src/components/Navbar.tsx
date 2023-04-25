@@ -3,6 +3,7 @@ import UserLoginButton from "./UserLoginButton";
 import CreateAccountButton from "./CreateAccountButton";
 import LanguageSelector from "./LangaugeSelector";
 import { CreateAccount } from "@/pageInterfaces";
+import styles from "@/styles/Home.module.css";
 
 const Navbar = ({
   createAccountVisible,
@@ -12,7 +13,7 @@ const Navbar = ({
   const [currentLanguage, setCurrentLanguage] = useState<string>("en");
 
   return (
-    <nav>
+    <div className={styles.navbar}>
       <UserLoginButton />
       <CreateAccountButton
         createAccountVisible={createAccountVisible}
@@ -22,7 +23,7 @@ const Navbar = ({
         currentLanguage={currentLanguage}
         setCurrentLanguage={setCurrentLanguage}
       />
-    </nav>
+    </div>
   );
 };
 

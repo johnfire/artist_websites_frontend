@@ -13,7 +13,7 @@ import { useTranslations, useFormatter } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 
-import Layout from "../components/Layout";
+import EntryLayout from "../components/EntryLayout";
 import styles from "@/styles/Home.module.css";
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -24,29 +24,27 @@ const Home = () => {
   const format = useFormatter();
 
   return (
-    <>
-      <Layout>
-        <div>
-          <Head>
-            <title>Euro Artist websites </title>
-            <meta
-              name="description"
-              content="website for generating custom art websites"
-            />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <main className={styles.main}>
-            <TitleComponent />
-            <Image src={"/thirteen.svg"} alt="13" width={200} height={200} />
-            <Link href="/About">about us</Link>
-          </main>
-        </div>
-      </Layout>
-    </>
+    <div>
+      <EntryLayout>
+        <Head>
+          <title>Euro Artist websites </title>
+          <meta
+            name="description"
+            content="website for generating custom art websites"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main className={styles.main}>
+          <h3 className={styles.center}>Euro Artist Websites</h3>
+          <TitleComponent />
+          <br />
+          <Image src={"/thirteen.svg"} alt="13" width={200} height={200} />
+          <br />
+          <Link href="/About">about us</Link>
+        </main>
+      </EntryLayout>
+    </div>
   );
 };
 

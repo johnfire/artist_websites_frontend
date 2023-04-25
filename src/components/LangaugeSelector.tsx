@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslations, useFormatter } from "next-intl";
 
 import { SelectProps } from "@/pageInterfaces";
+import styles from "@/styles/Home.module.css";
 
 const LanguageSelector = ({
   currentLanguage,
@@ -21,12 +22,13 @@ const LanguageSelector = ({
 
   return (
     <form method="post">
-      <label htmlFor="langauageSelectors">
+      <label htmlFor="langauageSelectors" className={styles.basicRow}>
         &nbsp;{t("choseLanguage")}&nbsp;&nbsp;
         <select
           id="langauageSelector"
           value={currentLanguage}
           onChange={(e) => handleSubmit(e)}
+          className={styles.button}
         >
           <option value="en">English</option>
           <option value="de">Deutsch</option>

@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useTranslations, useFormatter } from "next-intl";
 import { useRouter } from "next/navigation";
 import { CreateAccount } from "@/pageInterfaces";
+import styles from "@/styles/Home.module.css";
 
 // TODO move this later
 const customStyles = {
-  overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.6)",
-  },
   content: {
     top: "50%",
     left: "50%",
@@ -32,10 +30,12 @@ const CreateAccountButton = ({
   };
 
   const display = createAccountVisible ? (
-    <button type="button" onClick={handleClick}>
+    // <div id="container">
+    <button type="button" onClick={handleClick} className={styles.button}>
       &nbsp;&nbsp;&nbsp;&nbsp;{t("createAccount")}&nbsp;&nbsp;&nbsp;&nbsp;
     </button>
-  ) : null;
+  ) : // </div>
+  null;
 
   return <>{display}</>;
 };
