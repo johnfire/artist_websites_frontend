@@ -32,7 +32,10 @@ const Home = () => {
             name="description"
             content="website for generating custom art websites"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>

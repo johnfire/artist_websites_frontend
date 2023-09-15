@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
   /* border: 1px double purple;  */
   padding: 10vh;
 }
