@@ -50,9 +50,16 @@ const CreateNewAccount = () => {
     if (email.length > 0 && password.length > 7) {
       console.log("legitimate data, we can create account ");
       // create account here
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      }
+    
       axios
         .post("http://localhost:8000/createNewUser/", {
           data: { userName: userName, email: email, password: password },
+          config,
         })
         .then(function (response) {
           console.log("here is what we got", response);
